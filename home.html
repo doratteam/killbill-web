@@ -10,17 +10,112 @@
         <!-- Custom -->
         <link rel="stylesheet" href="css/login.css">
         <script src="js/login.js"></script>
+        <script>
+            $('#AddBalance').on('shown.bs.modal', function () {
+                  $('#AddBalance').focus();
+            });
+            $('#MonthlySnapshot').on('shown.bs.modal', function () {
+                  $('#MonthlySnapshot').focus();
+            });
+            $('#AnalyzeSpending').on('shown.bs.modal', function () {
+                  $('#AnalyzeSpending').focus();
+            });
 
+        </script>
         <title>KillBill</title>
     </head>
     <body>
         <div class="container">
             <div class="jumbotron">
                 <h4>Welcome!</h4>
-                <p><a class="btn btn-primary btn-lg" href="add-balance.html" role="button">Add Balance</a></p>
-                <p><a class="btn btn-success btn-lg" href="#" role="button">View Monthly Snapchat</a></p>
-                <p><a class="btn btn-info btn-lg" href="#" role="button">Analyze Your Spending</a></p>
+                <p><a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#AddBalance">Add Balance</a></p>
+                <p><a class="btn btn-success btn-lg" role="button" data-toggle="modal" data-target="#MonthlySnapshot">View Monthly Snapshot</a></p>
+                <p><a class="btn btn-info btn-lg" role="button" data-toggle="modal" data-target="#AnalyzeSpending">Analyze Your Spending</a></p>
             </div>
         </div>
+        <!-- Add Balance Modal -->
+        <div class="modal fade" id="AddBalance" tabindex="-1" role="dialog" aria-labelledby="#AddBalance">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add Balance</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <br/>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="sizing-addon1">Amount</span>
+                                <input type="text" class="form-control money" placeholder="$" aria-describedby="sizing-addon1">
+                                <span class="input-group-addon" id="sizing-addon1">Note</span>
+                                <input type="text" class="form-control amount" placeholder="What was this for?" aria-describedby="sizing-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Snapshot Modal -->
+        <div class="modal fade" id="MonthlySnapshot" tabindex="-1" role="dialog" aria-labelledby="#MonthlySnapshot">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Monthly Snapshot</h4>
+                    </div>
+                    <div class="modal-body">
+                        Not implemented yet
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Snapshot Modal -->
+        <div class="modal fade" id="MonthlySnapshot" tabindex="-1" role="dialog" aria-labelledby="#MonthlySnapshot">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Monthly Snapshot</h4>
+                    </div>
+                    <div class="modal-body">
+                        Not implemented yet
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analyze Spending Modal -->
+        <div class="modal fade" id="AnalyzeSpending" tabindex="-1" role="dialog" aria-labelledby="#AnalyzeSpending">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Your Spending Habits</h4>
+                    </div>
+                    <div class="modal-body">
+                        Not implemented yet
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </body>
 </html>
